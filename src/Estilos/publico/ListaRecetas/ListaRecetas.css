@@ -1,0 +1,40 @@
+  #contenidoPricipal {
+        background-color: #e1fce2;
+        width: 100%;
+    }
+
+    .btn-primary {
+        background-color: #43a847;
+        border-color: #43a847;
+    }
+
+    .btn-primary:hover {
+        background-color: #247326;
+        border-color: #247326;
+    }
+
+    .btn-primary:focus,
+    .btn-primary:focus-visible {
+        background-color: #43a847 !important;
+        border-color: #43a847 !important;
+        box-shadow: none !important;
+    }
+
+    .meal-card {
+        transition: transform 0.2s;
+        cursor: pointer;
+    }
+
+    .meal-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 73, 0, 0.3) !important;
+    }
+
+    .meal-card img {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .country-badge {
+        font-size: 0.75rem;
+    }

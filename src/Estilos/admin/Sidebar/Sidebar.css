@@ -1,0 +1,39 @@
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-layout .main-content {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+    .admin-sidebar {
+        min-height: 100vh;
+        position: sticky;
+        top: 0;
+        align-self: flex-start;
+        background-color: #1a1a2e;
+    }
+
+    .admin-sidebar .btn-nav {
+        background-color: transparent;
+        border: none;
+        color: #adb5bd;
+        text-align: left;
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 6px;
+        text-decoration: none;
+    }
+
+    .admin-sidebar .btn-nav:hover,
+    .admin-sidebar .btn-nav.active {
+        background-color: #343a57;
+        color: white;
+    }
+
+    .admin-sidebar a {
+        text-decoration: none;
+    }

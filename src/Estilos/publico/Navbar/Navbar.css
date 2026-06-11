@@ -1,0 +1,42 @@
+.layout-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #247326;
+    width: 200px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar-title {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.main-content {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.sidebar .btn-primary {
+    background-color: #013d03 !important;
+    border-color: #013d03 !important;
+    color: white;
+    width: 100%;
+    text-align: left;
+}
+
+.sidebar .btn-danger {
+    color: white;
+    width: 100%;
+    text-align: left;
+}

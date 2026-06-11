@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Nutricionales</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+    .sidebar {
+        min-height: 100vh;
+        position: sticky;
+        top: 0;
+        align-self: flex-start;
+        background-color: #247326;
+    }
+
+    #contenidoPricipal {
+        background-color: #e1fce2;
+        width: 100%;
+    }
+
+    .btn-primary {
+        background-color: #43a847;
+        border-color: #43a847;
+    }
+
+    .btn-primary:hover {
+        background-color: #247326;
+        border-color: #247326;
+    }
+
+    .btn-primary:focus,
+    .btn-primary:focus-visible {
+        background-color: #43a847 !important;
+        border-color: #43a847 !important;
+        box-shadow: none !important;
+    }
+
+    .sidebar .btn-primary {
+        background-color: #013d03 !important;
+        border-color: #013d03 !important;
+        color: white;
+    }
+
+    .nutrition-card {
+        max-width: 480px;
+        width: 100%;
+        border: 2px solid #1a1a1a;
+    }
+
+    .nutrition-card .card-header {
+        background-color: #1a1a1a;
+        color: white;
+    }
+
+    .nutrient-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 0;
+        border-bottom: 1px solid #dee2e6;
+        font-size: 0.9rem;
+    }
+
+    .nutrient-row:last-child {
+        border-bottom: none;
+    }
+</style>
+<body>
+    <div class="d-flex">
+        <nav class="sidebar text-center text-white p-3" style="width: 220px;">
+            <h5 class="text-white mb-4">Voy al Super!</h5>
+            <ul class="nav flex-column gap-3 text-center">
+                <li class="nav-item">
+                    <a href="#" class="btn btn-primary w-100">Listas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="btn btn-primary w-100">Uso</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="btn btn-primary w-100">Cambiar Plan</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="btn btn-danger w-100">Cerrar sesión</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="contenidoPricipal" class="p-4 d-flex justify-content-center align-items-start">
+            <div class="card shadow nutrition-card">
+                <div class="card-header">
+                    <h5 class="mb-0">Información Nutricional</h5>
+                </div>
+                <div class="card-body">
+                    <h4 class="fw-bold mb-0">Mantequilla</h4>
+                    <p class="text-muted small mb-3">Porción: 1 cucharada (14g)</p>
+                    <hr class="border-dark border-2 mt-0">
+
+                    <div class="nutrient-row fw-bold fs-5">
+                        <span>Calorías</span>
+                        <span>102 kcal</span>
+                    </div>
+                    <hr class="border-dark border-2">
+
+                    <div class="nutrient-row">
+                        <span><strong>Grasa Total</strong></span>
+                        <span>11.5 g</span>
+                    </div>
+                    <div class="nutrient-row ps-3 text-muted">
+                        <span>Grasa Saturada</span>
+                        <span>7.3 g</span>
+                    </div>
+                    <div class="nutrient-row">
+                        <span><strong>Colesterol</strong></span>
+                        <span>31 mg</span>
+                    </div>
+                    <div class="nutrient-row">
+                        <span><strong>Sodio</strong></span>
+                        <span>1 mg</span>
+                    </div>
+                    <div class="nutrient-row">
+                        <span><strong>Carbohidratos Totales</strong></span>
+                        <span>0 g</span>
+                    </div>
+                    <div class="nutrient-row ps-3 text-muted">
+                        <span>Azúcares</span>
+                        <span>0 g</span>
+                    </div>
+                    <div class="nutrient-row">
+                        <span><strong>Proteínas</strong></span>
+                        <span>0.1 g</span>
+                    </div>
+
+                    <hr class="border-dark border-2">
+
+                    <div class="nutrient-row">
+                        <span>Calcio</span>
+                        <span>0 %</span>
+                    </div>
+                    <div class="nutrient-row">
+                        <span>Vitamina D</span>
+                        <span>0 %</span>
+                    </div>
+                    <div class="nutrient-row">
+                        <span>Potasio</span>
+                        <span>3 mg</span>
+                    </div>
+                </div>
+                <div class="card-footer text-end">
+                    <a href="#" class="btn btn-outline-secondary btn-sm">
+                        <i class="bi bi-arrow-left"></i> Volver
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

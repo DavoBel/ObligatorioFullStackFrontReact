@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+    .sidebar {
+        min-height: 100vh;
+        position: sticky;
+        top: 0;
+        align-self: flex-start;
+        background-color: #247326;
+    }
+
+    #contenidoPricipal {
+        background-color: #e1fce2;
+        width: 100%;
+    }
+
+    .btn-primary {
+        background-color: #43a847;
+        border-color: #43a847;
+    }
+
+    .btn-primary:hover {
+        background-color: #247326;
+        border-color: #247326;
+    }
+
+    .btn-primary:focus,
+    .btn-primary:focus-visible {
+        background-color: #43a847 !important;
+        border-color: #43a847 !important;
+        box-shadow: none !important;
+    }
+
+    .sidebar .btn-primary {
+        background-color: #013d03 !important;
+        border-color: #013d03 !important;
+        color: white;
+    }
+
+    .meal-card {
+        transition: transform 0.2s;
+        cursor: pointer;
+    }
+
+    .meal-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 73, 0, 0.3) !important;
+    }
+
+    .meal-card img {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .country-badge {
+        font-size: 0.75rem;
+    }
+</style>
+<body>
+    <div class="d-flex">
+        <nav class="sidebar text-center text-white p-3" style="width: 220px;">
+            <h5 class="text-white mb-4">Voy al Super!</h5>
+            <ul class="nav flex-column gap-3 text-center">
+                <li class="nav-item">
+                    <a href="#" class="btn btn-primary w-100">Listas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="btn btn-primary w-100">Uso</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="btn btn-primary w-100">Cambiar Plan</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="btn btn-danger w-100">Cerrar sesión</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="contenidoPricipal" class="p-4">
+            <div class="d-flex align-items-center mb-4 gap-2">
+                <a href="#" class="btn btn-outline-secondary btn-sm">
+                    <i class="bi bi-arrow-left"></i> Volver
+                </a>
+                <h4 class="mb-0">Recetas sugeridas</h4>
+            </div>
+
+            <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3">
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm meal-card">
+                        <img src="https://www.themealdb.com/images/media/meals/qrqywr1503066605.jpg" class="card-img-top" alt="Chicken Fajita Mac and Cheese">
+                        <div class="card-body">
+                            <h6 class="card-title">Chicken Fajita Mac and Cheese</h6>
+                            <span class="badge bg-secondary country-badge">
+                                <i class="bi bi-geo-alt"></i> United States
+                            </span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm meal-card">
+                        <img src="https://www.themealdb.com/images/media/meals/0jv5gx1661040802.jpg" class="card-img-top" alt="Fettuccine Alfredo">
+                        <div class="card-body">
+                            <h6 class="card-title">Fettuccine Alfredo</h6>
+                            <span class="badge bg-secondary country-badge">
+                                <i class="bi bi-geo-alt"></i> Italy
+                            </span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm meal-card">
+                        <img src="https://www.themealdb.com/images/media/meals/1xscby1764790242.jpg" class="card-img-top" alt="Grape Nut Ice Cream">
+                        <div class="card-body">
+                            <h6 class="card-title">Grape Nut Ice Cream</h6>
+                            <span class="badge bg-secondary country-badge">
+                                <i class="bi bi-geo-alt"></i> Jamaica
+                            </span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm meal-card">
+                        <img src="https://www.themealdb.com/images/media/meals/xutquv1505330523.jpg" class="card-img-top" alt="Grilled Mac and Cheese Sandwich">
+                        <div class="card-body">
+                            <h6 class="card-title">Grilled Mac and Cheese Sandwich</h6>
+                            <span class="badge bg-secondary country-badge">
+                                <i class="bi bi-geo-alt"></i> United States
+                            </span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm meal-card">
+                        <img src="https://www.themealdb.com/images/media/meals/xihv0c1764447887.jpg" class="card-img-top" alt="Hodge Podge">
+                        <div class="card-body">
+                            <h6 class="card-title">Hodge Podge</h6>
+                            <span class="badge bg-secondary country-badge">
+                                <i class="bi bi-geo-alt"></i> Canada
+                            </span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm meal-card">
+                        <img src="https://www.themealdb.com/images/media/meals/xrysxr1483568462.jpg" class="card-img-top" alt="Hot Chocolate Fudge">
+                        <div class="card-body">
+                            <h6 class="card-title">Hot Chocolate Fudge</h6>
+                            <span class="badge bg-secondary country-badge">
+                                <i class="bi bi-geo-alt"></i> United States
+                            </span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm meal-card">
+                        <img src="https://www.themealdb.com/images/media/meals/gdn1ot1763075684.jpg" class="card-img-top" alt="Kvæfjord Cake">
+                        <div class="card-body">
+                            <h6 class="card-title">Kvæfjord Cake "Verdens Beste"</h6>
+                            <span class="badge bg-secondary country-badge">
+                                <i class="bi bi-geo-alt"></i> Norway
+                            </span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm meal-card">
+                        <img src="https://www.themealdb.com/images/media/meals/s9qyzd1764790772.jpg" class="card-img-top" alt="No-Churn Rum Raisin Ice Cream">
+                        <div class="card-body">
+                            <h6 class="card-title">No-Churn Rum Raisin Ice Cream</h6>
+                            <span class="badge bg-secondary country-badge">
+                                <i class="bi bi-geo-alt"></i> Jamaica
+                            </span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm meal-card">
+                        <img src="https://www.themealdb.com/images/media/meals/hxcuj01762772827.jpg" class="card-img-top" alt="Norwegian Potato Lefse">
+                        <div class="card-body">
+                            <h6 class="card-title">Norwegian Potato Lefse</h6>
+                            <span class="badge bg-secondary country-badge">
+                                <i class="bi bi-geo-alt"></i> Norway
+                            </span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm meal-card">
+                        <img src="https://www.themealdb.com/images/media/meals/wii0591764375062.jpg" class="card-img-top" alt="Postre Chajá">
+                        <div class="card-body">
+                            <h6 class="card-title">Postre Chajá</h6>
+                            <span class="badge bg-secondary country-badge">
+                                <i class="bi bi-geo-alt"></i> Uruguay
+                            </span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm meal-card">
+                        <img src="https://www.themealdb.com/images/media/meals/vussxq1511882648.jpg" class="card-img-top" alt="Steak Diane">
+                        <div class="card-body">
+                            <h6 class="card-title">Steak Diane</h6>
+                            <span class="badge bg-secondary country-badge">
+                                <i class="bi bi-geo-alt"></i> France
+                            </span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm meal-card">
+                        <img src="https://www.themealdb.com/images/media/meals/de83k51763075604.jpg" class="card-img-top" alt="Suksessterte">
+                        <div class="card-body">
+                            <h6 class="card-title">Suksessterte (Norwegian almond cake)</h6>
+                            <span class="badge bg-secondary country-badge">
+                                <i class="bi bi-geo-alt"></i> Norway
+                            </span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm w-100">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

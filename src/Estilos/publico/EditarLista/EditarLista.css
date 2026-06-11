@@ -1,0 +1,82 @@
+    #contenidoPricipal {
+        background-color: #e1fce2;
+        width: 100%;
+    }
+
+    .btn-primary {
+        background-color: #43a847;
+        border-color: #43a847;
+    }
+
+    .btn-primary:hover {
+        background-color: #247326;
+        border-color: #247326;
+    }
+
+    .btn-primary:focus,
+    .btn-primary:focus-visible {
+        background-color: #43a847 !important;
+        border-color: #43a847 !important;
+        box-shadow: none !important;
+    }
+    
+    .form-card {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    /* Modal sin JavaScript usando :target */
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1050;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-overlay:target {
+        display: flex;
+    }
+
+    .modal-box {
+        background: white;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 480px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-header-custom {
+        background-color: #43a847;
+        color: white;
+        padding: 1rem 1.25rem;
+        border-radius: 8px 8px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal-close {
+        color: white;
+        text-decoration: none;
+        font-size: 1.4rem;
+        line-height: 1;
+    }
+
+    .modal-close:hover {
+        color: #d4edda;
+    }
+
+    .modal-body-custom {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .modal-footer-custom {
+        padding: 1rem 1.25rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        border-top: 1px solid #dee2e6;
+    }

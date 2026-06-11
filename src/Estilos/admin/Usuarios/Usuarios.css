@@ -1,0 +1,31 @@
+#contenidoPrincipal {
+        background-color: #f4f6f9;
+        width: 100%;
+    }
+
+    .table thead th {
+        background-color: #1a1a2e;
+        color: white;
+        font-weight: 500;
+        border: none;
+    }
+
+    .table tbody tr:hover {
+        background-color: #e8f5e9;
+    }
+
+    .badge-plan {
+        min-width: 80px !important;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .btn-nuevo-admin {
+        background-color: #1a1a2e;
+    }
+
+    .btn-nuevo-admin:hover {
+        background-color: white !important;
+        color: #1a1a2e !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }

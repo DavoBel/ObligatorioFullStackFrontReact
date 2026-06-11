@@ -1,0 +1,26 @@
+#contenidoPricipal {
+    background-color: #e1fce2;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #43a847;
+    border-color: #43a847;
+}
+
+.btn-primary:hover {
+    background-color: #247326;
+    border-color: #247326;
+}
+
+.btn-primary:focus,
+.btn-primary:focus-visible {
+    background-color: #43a847 !important;
+    border-color: #43a847 !important;
+    box-shadow: none !important;
+}
+
+.form-card {
+    max-width: 500px;
+    width: 100%;
+}

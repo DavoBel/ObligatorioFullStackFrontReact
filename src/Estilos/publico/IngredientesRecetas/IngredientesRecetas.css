@@ -1,0 +1,50 @@
+    #contenidoPricipal {
+        background-color: #e1fce2;
+        width: 100%;
+    }
+
+    .btn-primary {
+        background-color: #43a847;
+        border-color: #43a847;
+    }
+
+    .btn-primary:hover {
+        background-color: #247326;
+        border-color: #247326;
+    }
+
+    .btn-primary:focus,
+    .btn-primary:focus-visible {
+        background-color: #43a847 !important;
+        border-color: #43a847 !important;
+        box-shadow: none !important;
+    }
+
+    .recipe-img {
+        width: 100%;
+        max-height: 340px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .ingredient-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 0;
+        border-bottom: 1px solid #dee2e6;
+        font-size: 0.9rem;
+    }
+
+    .ingredient-item:last-child {
+        border-bottom: none;
+    }
+
+    .ingredient-amount {
+        color: #555;
+        font-style: italic;
+    }
+
+    .instructions-text {
+        white-space: pre-line;
+        line-height: 1.8;
+    }

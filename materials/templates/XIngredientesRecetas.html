@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Receta</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+    .sidebar {
+        min-height: 100vh;
+        position: sticky;
+        top: 0;
+        align-self: flex-start;
+        background-color: #247326;
+    }
+
+    #contenidoPricipal {
+        background-color: #e1fce2;
+        width: 100%;
+    }
+
+    .btn-primary {
+        background-color: #43a847;
+        border-color: #43a847;
+    }
+
+    .btn-primary:hover {
+        background-color: #247326;
+        border-color: #247326;
+    }
+
+    .btn-primary:focus,
+    .btn-primary:focus-visible {
+        background-color: #43a847 !important;
+        border-color: #43a847 !important;
+        box-shadow: none !important;
+    }
+
+    .sidebar .btn-primary {
+        background-color: #013d03 !important;
+        border-color: #013d03 !important;
+        color: white;
+    }
+
+    .recipe-img {
+        width: 100%;
+        max-height: 340px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .ingredient-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 0;
+        border-bottom: 1px solid #dee2e6;
+        font-size: 0.9rem;
+    }
+
+    .ingredient-item:last-child {
+        border-bottom: none;
+    }
+
+    .ingredient-amount {
+        color: #555;
+        font-style: italic;
+    }
+
+    .instructions-text {
+        white-space: pre-line;
+        line-height: 1.8;
+    }
+</style>
+<body>
+    <div class="d-flex">
+        <nav class="sidebar text-center text-white p-3" style="width: 220px;">
+            <h5 class="text-white mb-4">Voy al Super!</h5>
+            <ul class="nav flex-column gap-3 text-center">
+                <li class="nav-item">
+                    <a href="#" class="btn btn-primary w-100">Listas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="btn btn-primary w-100">Uso</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="btn btn-primary w-100">Cambiar Plan</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="btn btn-danger w-100">Cerrar sesión</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="contenidoPricipal" class="p-4">
+            <div class="d-flex align-items-center mb-4 gap-2">
+                <a href="#" class="btn btn-outline-secondary btn-sm">
+                    <i class="bi bi-arrow-left"></i> Volver
+                </a>
+                <h4 class="mb-0">Chicken Fajita Mac and Cheese</h4>
+            </div>
+
+            <div class="row g-4">
+                <!-- Columna izquierda: imagen + ingredientes -->
+                <div class="col-12 col-lg-5">
+                    <img src="https://www.themealdb.com/images/media/meals/qrqywr1503066605.jpg" class="recipe-img shadow mb-3" alt="Chicken Fajita Mac and Cheese">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-success text-white fw-semibold">
+                            <i class="bi bi-list-ul"></i> Ingredientes
+                        </div>
+                        <div class="card-body p-3">
+
+                            <div class="ingredient-item">
+                                <span>Macaroni</span>
+                                <span class="ingredient-amount">500g</span>
+                            </div>
+                            <div class="ingredient-item">
+                                <span>Chicken stock</span>
+                                <span class="ingredient-amount">2 cups</span>
+                            </div>
+                            <div class="ingredient-item">
+                                <span>Heavy cream</span>
+                                <span class="ingredient-amount">1/2 cup</span>
+                            </div>
+                            <div class="ingredient-item">
+                                <span>Fajita seasoning</span>
+                                <span class="ingredient-amount">1 packet</span>
+                            </div>
+                            <div class="ingredient-item">
+                                <span>Salt</span>
+                                <span class="ingredient-amount">1 tsp</span>
+                            </div>
+                            <div class="ingredient-item">
+                                <span>Chicken breast</span>
+                                <span class="ingredient-amount">3 diced</span>
+                            </div>
+                            <div class="ingredient-item">
+                                <span>Olive oil</span>
+                                <span class="ingredient-amount">2 tbsp</span>
+                            </div>
+                            <div class="ingredient-item">
+                                <span>Onion</span>
+                                <span class="ingredient-amount">1 small finely diced</span>
+                            </div>
+                            <div class="ingredient-item">
+                                <span>Red pepper</span>
+                                <span class="ingredient-amount">2 finely diced</span>
+                            </div>
+                            <div class="ingredient-item">
+                                <span>Garlic</span>
+                                <span class="ingredient-amount">2 cloves minced</span>
+                            </div>
+                            <div class="ingredient-item">
+                                <span>Cheddar cheese</span>
+                                <span class="ingredient-amount">1 cup</span>
+                            </div>
+                            <div class="ingredient-item">
+                                <span>Parsley</span>
+                                <span class="ingredient-amount">garnish chopped</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: instrucciones + video -->
+                <div class="col-12 col-lg-7">
+                    <div class="card shadow-sm mb-3">
+                        <div class="card-header bg-success text-white fw-semibold">
+                            <i class="bi bi-journal-text"></i> Instrucciones
+                        </div>
+                        <div class="card-body p-3">
+                            <p class="instructions-text mb-0">Fry your onion, peppers and garlic in olive oil until nicely translucent. Make a well in your veg and add your chicken. Add your seasoning and salt. Allow to colour slightly.
+Add your cream, stock and macaroni.
+Cook on low for 20 minutes. Add your cheeses, stir to combine.
+Top with roasted peppers and parsley.</p>
+                        </div>
+                    </div>
+
+                    <a href="https://www.youtube.com/watch?v=bwTSmLTZKNg"
+                       target="_blank"
+                       class="btn btn-danger w-100">
+                        <i class="bi bi-youtube"></i> Ver video en YouTube
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

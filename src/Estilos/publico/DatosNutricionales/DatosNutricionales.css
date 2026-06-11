@@ -1,0 +1,48 @@
+    html{
+        background-color: #e1fce2;
+    }
+
+    #contenidoPricipal {
+        background-color: #e1fce2;
+        width: 100%;
+    }
+
+    .btn-primary {
+        background-color: #43a847;
+        border-color: #43a847;
+    }
+
+    .btn-primary:hover {
+        background-color: #247326;
+        border-color: #247326;
+    }
+
+    .btn-primary:focus,
+    .btn-primary:focus-visible {
+        background-color: #43a847 !important;
+        border-color: #43a847 !important;
+        box-shadow: none !important;
+    }
+
+    .nutrition-card {
+        max-width: 480px;
+        width: 100%;
+        border: 2px solid #1a1a1a;
+    }
+
+    .nutrition-card .card-header {
+        background-color: #1a1a1a;
+        color: white;
+    }
+
+    .nutrient-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 0;
+        border-bottom: 1px solid #dee2e6;
+        font-size: 0.9rem;
+    }
+
+    .nutrient-row:last-child {
+        border-bottom: none;
+    }
