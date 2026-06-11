@@ -1,4 +1,4 @@
-import CardEditarCategoria from "./Card/CardEditarCategoria"
+import CardEditarCategoria from "./card/CardEditarCategoria"
 import '../../../Estilos/admin/AgregarProducto/AgregarProducto.css'
 
 const EditarCategoria = () => {
