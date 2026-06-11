@@ -4,7 +4,7 @@ import { toast } from "react-toastify"
 
 const api = axios.create({
     //baseURL: "http://localhost:3000/v1"
-    baseURL:"https://obligatorio-full-stack-front-rkaaj58gm.vercel.app/v1"
+    baseURL:"https://obligatorio-full-stack-front-4czm4yblf.vercel.app/v1"
 })
 
 
