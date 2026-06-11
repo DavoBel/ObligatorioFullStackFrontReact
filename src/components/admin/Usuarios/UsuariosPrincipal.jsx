@@ -1,6 +1,6 @@
 import HeaderUsuario from './headerUsuario'
 import BodyUsuarios from './BodyUsuarios'
-import Paginacion from '../../publico/Paginacion/Paginacion'
+import Paginacion from '../../publico/paginacion/Paginacion'
 import '../../../Estilos/admin/Usuarios/Usuarios.css'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'

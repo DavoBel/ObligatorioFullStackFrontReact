@@ -1,5 +1,5 @@
 import Card from "./Cards/Card"
-import Paginacion from "../Paginacion/Paginacion"
+import Paginacion from "../paginacion/Paginacion"
 import FiltrosListas from "./Filtros/FiltrosListas"
 import '../../../Estilos/publico/ListasCompras/ListasCompras.css'
 import { useEffect, useState } from "react"

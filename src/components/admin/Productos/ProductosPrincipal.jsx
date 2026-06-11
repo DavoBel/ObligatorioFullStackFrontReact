@@ -1,6 +1,6 @@
 import HeaderProductos from './Card/headerProductos'
 import BodyProductos from './Card/BodyProductos'
-import Paginacion from '../../publico/Paginacion/Paginacion'
+import Paginacion from '../../publico/paginacion/Paginacion'
 import '../../../Estilos/admin/Productos/Productos.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { setPage } from '../../../features/ProductosSlice'

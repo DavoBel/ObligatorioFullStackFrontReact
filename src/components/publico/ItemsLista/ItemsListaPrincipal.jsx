@@ -1,5 +1,5 @@
 import ItemsLista from "./ItemsLista"
-import Paginacion from "../Paginacion/Paginacion"
+import Paginacion from "../paginacion/Paginacion"
 import { useNavigate, useParams } from 'react-router'
 import '../../../Estilos/publico/ItemsLista/ItemsLista.css'
 

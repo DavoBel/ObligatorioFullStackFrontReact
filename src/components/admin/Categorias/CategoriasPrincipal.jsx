@@ -1,7 +1,7 @@
 import HeaderCategorias from './HeaderCategorias'
 import BodyCategorias from './BodyCategorias'
 import '../../../Estilos/admin/Categorias/Categorias.css'
-import Paginacion from '../../publico/Paginacion/Paginacion'
+import Paginacion from '../../publico/paginacion/Paginacion'
 import { useSelector, useDispatch } from 'react-redux'
 import { setPage } from '../../../features/CategoriasSlice'
 
