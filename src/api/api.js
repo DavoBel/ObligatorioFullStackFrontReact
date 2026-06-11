@@ -3,8 +3,8 @@ import { jwtDecode } from "jwt-decode"
 import { toast } from "react-toastify"
 
 const api = axios.create({
-    //baseURL: "http://localhost:3000/v1"
-    baseURL:"https://obligatorio-full-stack-front-rkaaj58gm.vercel.app/v1"
+    baseURL: "http://localhost:3000/v1"
+    //baseURL:"https://obligatorio-full-stack-front-rkaaj58gm.vercel.app/v1"
 })
 
 
@@ -17,7 +17,6 @@ export const getRol = () => {
     }
 }
 
-// Interceptor de request
 api.interceptors.request.use(
     (config) => {
         if (!(config.data instanceof FormData)) {
@@ -33,7 +32,6 @@ api.interceptors.request.use(
     (error) => Promise.reject(error)
 );
 
-// Interceptor de response (ejemplo: manejar expiración de token)
 api.interceptors.response.use(
     (response) => response,
     (error) => {

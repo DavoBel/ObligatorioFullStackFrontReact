@@ -19,10 +19,10 @@ ChartJS.register(
     Legend
 );
 
-const ChartProductos = () => {
+const ChartProductosPremium = () => {
 
     const opciones = useSelector((state) => state.EstadisticasSlice.opciones);
-    const ProductosDatos = useSelector((state) => state.EstadisticasSlice.ProductosDatosTotales);
+    const ProductosDatos = useSelector((state) => state.EstadisticasSlice.ProductosDatosPremium);
 
     const options ={
         responsive: true,
@@ -44,7 +44,7 @@ const ChartProductos = () => {
             {
                 label: 'Productos',
                 data: ProductosDatos,
-                backgroundColor: '#43a847',
+                backgroundColor: '#1a1a2e',
             },
         ],
     };
@@ -52,10 +52,12 @@ const ChartProductos = () => {
     if (!opciones || !ProductosDatos) return null;
 
     return (
-        <div className="chart-container">
-            <Bar options={options} data={data} />
+        <div className="chart-card">
+            <div className="chart-container">
+                <Bar options={options} data={data} />
+            </div>
         </div>
     )
 }
 
-export default ChartProductos
+export default ChartProductosPremium

@@ -22,7 +22,6 @@ const FormLogin = () => {
         .then(r =>{
             localStorage.setItem("token", r.data.token);
             localStorage.setItem("user", r.data.user);
-            toast.success("¡Bienvenido!");
             getRol()?.toUpperCase() === "ADMIN" ? navigate("/Usuarios") : navigate("/listas")
         }).catch(
             e => {

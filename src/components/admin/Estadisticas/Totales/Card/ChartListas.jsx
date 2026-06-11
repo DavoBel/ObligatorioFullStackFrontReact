@@ -10,19 +10,12 @@ import {
 import { useSelector } from 'react-redux';
 import { Bar } from 'react-chartjs-2';
 
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend
-);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const ChartProductos = () => {
+const ChartListas = () => {
 
     const opciones = useSelector((state) => state.EstadisticasSlice.opciones);
-    const ProductosDatos = useSelector((state) => state.EstadisticasSlice.ProductosDatosTotales);
+    const ListasDatos = useSelector((state) => state.EstadisticasSlice.ListasDatosTotales);
 
     const options ={
         responsive: true,
@@ -33,7 +26,7 @@ const ChartProductos = () => {
             },
             title: {
                 display: true,
-                text: 'Productos utilizados:',
+                text: 'Listas Creadas',
             },
         }
     }
@@ -42,20 +35,22 @@ const ChartProductos = () => {
         labels: opciones,
         datasets: [
             {
-                label: 'Productos',
-                data: ProductosDatos,
-                backgroundColor: '#43a847',
+                label: 'listas',
+                data: ListasDatos,
+                backgroundColor: '#1a1a2e',
             },
         ],
     };
 
-    if (!opciones || !ProductosDatos) return null;
+    if (!opciones || !ListasDatos) return null;
 
     return (
-        <div className="chart-container">
-            <Bar options={options} data={data} />
+        <div className="chart-card">
+            <div className="chart-container">
+                <Bar options={options} data={data} />
+            </div>
         </div>
     )
 }
 
-export default ChartProductos
+export default ChartListas

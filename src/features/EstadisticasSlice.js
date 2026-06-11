@@ -2,8 +2,15 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     opciones:null,
-    ListasDatos:null,
-    ProductosDatos:null
+
+    ListasDatosTotales:null,
+    ProductosDatosTotales:null,
+
+    ListasDatosPlus:null,
+    ProductosDatosPlus:null,
+
+    ListasDatosPremium:null,
+    ProductosDatosPremium:null
 }
 
 export const EstadisticasSlice = createSlice({
@@ -13,15 +20,32 @@ export const EstadisticasSlice = createSlice({
         setOpciones:(state, action)=>{
             state.opciones = action.payload
         },
-        setListasDatos:(state, action)=>{
-            state.ListasDatos = action.payload
+        setListasDatosTotales:(state, action)=>{
+            state.ListasDatosTotales = action.payload
         },
-        setProductosDatos:(state, action)=>{
-            state.ProductosDatos = action.payload
+        setProductosDatosTotales:(state, action)=>{
+            state.ProductosDatosTotales = action.payload
+        },
+        setListasDatosPlus:(state, action)=>{
+            state.ListasDatosPlus = action.payload
+        },
+        setProductosDatosPlus:(state, action)=>{
+            state.ProductosDatosPlus = action.payload
+        },
+        setListasDatosPremium:(state, action)=>{
+            state.ListasDatosPremium = action.payload
+        },
+        setProductosDatosPremium:(state, action)=>{
+            state.ProductosDatosPremium = action.payload
         }
     }
 })
 
-export const { setOpciones, setListasDatos, setProductosDatos } = EstadisticasSlice.actions;
+export const { 
+    setOpciones, 
+    setListasDatosTotales, setProductosDatosTotales, 
+    setListasDatosPlus, setProductosDatosPlus, 
+    setListasDatosPremium, setProductosDatosPremium 
+} = EstadisticasSlice.actions;
 
 export default EstadisticasSlice.reducer;

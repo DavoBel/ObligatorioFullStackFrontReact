@@ -31,7 +31,7 @@ const FormAgregarItem = () => {
         .catch(e => console.error(e))
         .finally(() => setLoading(false));
     }else {
-        setLoading(false); // ya tenemos productos, no hace falta fetchear
+        setLoading(false);
     }
   }, []);
 

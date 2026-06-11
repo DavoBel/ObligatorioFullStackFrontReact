@@ -15,7 +15,7 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 const ChartListas = () => {
 
     const opciones = useSelector((state) => state.EstadisticasSlice.opciones);
-    const ListasDatos = useSelector((state) => state.EstadisticasSlice.ListasDatos);
+    const ListasDatos = useSelector((state) => state.EstadisticasSlice.ListasDatosTotales);
 
     const options ={
         responsive: true,

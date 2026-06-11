@@ -1,11 +1,15 @@
 import Opciones from "./Opciones"
 import '../../../Estilos/publico/Navbar/Navbar.css'
 import {Outlet} from "react-router"
+import favicon from '../../../assets/Favicon.png'
 const Navbar = () => {
   return (
     <div className="layout-wrapper">
       <aside className="sidebar">
-        <h5 className="sidebar-title">Voy al Super!</h5>
+        <h5 className="sidebar-title">
+          <img src={favicon} alt="logo" />
+          <p>Voy al Super!</p>
+        </h5>
         <Opciones/>
       </aside>
       <main className="main-content">

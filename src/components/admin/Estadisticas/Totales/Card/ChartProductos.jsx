@@ -44,7 +44,7 @@ const ChartProductos = () => {
             {
                 label: 'Productos',
                 data: ProductosDatos,
-                backgroundColor: '#43a847',
+                backgroundColor: '#1a1a2e',
             },
         ],
     };
@@ -52,8 +52,10 @@ const ChartProductos = () => {
     if (!opciones || !ProductosDatos) return null;
 
     return (
-        <div className="chart-container">
-            <Bar options={options} data={data} />
+        <div className="chart-card">
+            <div className="chart-container">
+                <Bar options={options} data={data} />
+            </div>
         </div>
     )
 }

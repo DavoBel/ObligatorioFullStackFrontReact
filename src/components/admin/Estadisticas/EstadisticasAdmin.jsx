@@ -1,31 +1,54 @@
 import { useEffect, useState } from "react"
-import ChartListas from "./ChartListas"
-import ChartProductos from "./ChartProductos"
 import api from "../../../api/api"
 import { useDispatch, useSelector } from "react-redux"
-import { setOpciones, setListasDatos, setProductosDatos } from "../../../features/EstadisticasSlice"
+import { 
+    setOpciones, 
+    setListasDatosTotales, setProductosDatosTotales, 
+    setListasDatosPlus, setProductosDatosPlus, 
+    setListasDatosPremium, setProductosDatosPremium  
+} from "../../../features/EstadisticasSlice"
 import '../../../Estilos/admin/Estadisticas/Estadisticas.css'
 import Loading from "../../publico/Loading/Loading"
+import CardEstadisticasAdmin from "./Totales/CardEstadisticasAdmin"
+import CardEstadisticasAdminPremium from "./Premium/CardEstadisticasAdminPremium"
+import CardEstadisticasAdminPlus from "./Plus/CardEstadisticasAdminPlus"
 
 const EstadisticasAdmin = () => {
 
   const dispatch = useDispatch();
   const opciones = useSelector((state) => state.EstadisticasSlice.opciones);
-  const ListasDatos = useSelector((state) => state.EstadisticasSlice.ListasDatos);
-  const ProductosDatos = useSelector((state) => state.EstadisticasSlice.ProductosDatos);
+
+  //---Datos Graficas---
+  const ListasDatosTotales = useSelector((state) => state.EstadisticasSlice.ListasDatosTotales);
+  const ProductosDatosTotales = useSelector((state) => state.EstadisticasSlice.ProductosDatosTotales);
+
+  const ListasDatosPlus = useSelector((state) => state.EstadisticasSlice.ListasDatosPlus);
+  const ProductosDatosPlus = useSelector((state) => state.EstadisticasSlice.ProductosDatosPlus);
+
+  const ListasDatosPremium = useSelector((state) => state.EstadisticasSlice.ListasDatosPremium);
+  const ProductosDatosPremium = useSelector((state) => state.EstadisticasSlice.ProductosDatosPremium);
+  //---Datos Graficas---
+
   const [loadingListas, setLoadingListas] = useState(true); 
   const [loadingProducto, setLoadingProducto] = useState(true); 
 
   useEffect(()=>{
-      api.get(`/listas/obtenerUsoXMes`).then(r=>{
+      api.get(`/listas/obtenerUsoXMesAdmin`).then(r=>{
         dispatch(setOpciones(r.data.meses));
-        dispatch(setListasDatos(r.data.cantidades));
-      }).catch(e=>console.error("listas error", e))
+        dispatch(setListasDatosTotales(r.data.total));
+        dispatch(setListasDatosPlus(r.data.plus));
+        dispatch(setListasDatosPremium(r.data.premium));
+      }).catch(e=>console.error(e))
       .finally(() => setLoadingListas(false));
-      api.get(`/items/obtenerUsoXMes`).then(r=>{
-        dispatch(setProductosDatos(r.data.cantidades));
-      }).catch(e=>console.error("items error", e))
+
+      api.get(`/items/obtenerUsoXMesAdmin`).then(r=>{
+        dispatch(setOpciones(r.data.meses));
+        dispatch(setProductosDatosTotales(r.data.total));
+        dispatch(setProductosDatosPlus(r.data.plus));
+        dispatch(setProductosDatosPremium(r.data.premium));
+      }).catch(e=>console.error(e))
       .finally(() => setLoadingProducto(false));
+      
   },[])
 
   if (loadingListas || loadingProducto){
@@ -42,19 +65,15 @@ const EstadisticasAdmin = () => {
   }
 
   return (
-    <div className="card shadow-sm estadisticas-card">
-      <div className="card-body p-0">
-        <div className="estadisticas-header p-3 pb-0">
-          <h4 className="mb-3">Estadisticas</h4>
-        </div>
-        <div className="estadisticas-grid">
-          <div className="chart-card">
-            <ChartListas/>
-          </div>
-          <div className="chart-card">
-            <ChartProductos/>
-          </div>
-        </div>
+    <div className="estadisticas-layout">
+      <div className="estadisticas-totales">
+        <CardEstadisticasAdmin/>
+      </div>
+      <div className="estadisticas-premium">
+        <CardEstadisticasAdminPremium/>
+      </div>
+      <div className="estadisticas-plus">
+        <CardEstadisticasAdminPlus/>
       </div>
     </div>
   )

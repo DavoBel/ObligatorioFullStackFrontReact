@@ -21,6 +21,17 @@
     font-weight: 700;
 }
 
+.sidebar-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-title img {
+    width: clamp(20px, 3vw, 32px);
+    height: auto;
+}
+
 .main-content {
     flex: 1;
     padding: 1.5rem;
